@@ -1,0 +1,53 @@
+@layer algolia, base, components;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import "https://cdn.jsdelivr.net/npm/instantsearch.css@8.4.0/themes/satellite-min.css" layer(aloglia);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  background-color: #242424;
+}
+
+@layer base {
+  :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .search-box {
+    @apply w-full max-w-md mx-auto px-4 py-6 rounded-lg shadow-md;
+    @apply text-white bg-gray-800 border border-gray-700;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white;
+
+    input {
+      @apply w-full p-3 text-sm rounded-lg;
+      @apply text-gray-100 bg-gray-700 border-0;
+      padding-left: 3rem;
+    }
+  }
+
+
+  .ais-SearchBox {
+    margin-bottom: 1rem;
+  }
+
+  .ais-Hits-list .ais-Hits-item {
+    background-color: #242424;
+  }
+}
